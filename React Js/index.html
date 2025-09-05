@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <h1 style="color: brown; text-align: center;">Welcome</h1>
+    <h1 id="123" style="text-align: center;">Hmm Hmm</h1>
+    <p style="text-align: center;">Hello guyss!!</p>
+    <button  onclick="abc()">click me</button>
+    
+    <script>
+        function abc(){
+            const p =prompt("Enter ur name");
+            console.log("Hii")
+            document.querySelector("h1").textContent= "welcome"+p;
+            document.getElementById("123").style.color="green";
+        }
+    </script>
+    
+</body>
+</html>
