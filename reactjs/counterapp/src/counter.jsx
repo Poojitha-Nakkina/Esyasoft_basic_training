@@ -47,6 +47,9 @@ console.log(add(5,20));
     console.log(arr2.name);
     console.log(arr2.age);
 
+    /* rest operator '...' -> collecting all props and args*/
+    
+
     const increment=()=>{
         count++;
         document.getElementById("c1").innerText=count;
