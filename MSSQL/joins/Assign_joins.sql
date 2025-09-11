@@ -79,3 +79,20 @@ use Pooj
 	SELECT TOP 1 * FROM books ORDER BY price ;
 
 	SELECT * FROM books ORDER BY product_id DESC;
+
+
+     /*Find the top2 most expensive books purchased by each user apply ROW_NUMBER(), RANK(), DENSE_RANK() with partition by userid and order by price desc*/
+
+SELECT u.name , b.title ,b.price , row_number() over (partition by u.userid order by b.price desc) as top2 , 
+rank() over (partition by u.userid order by b.price desc ) as rank_
+,dense_rank() over (partition by u.userid order by b.price desc ) as drank_
+FROM users u
+INNER JOIN orders o ON u.userid = o.userid
+INNER JOIN books b ON o.product_id = b.product_id
+
+/*Ranking users by TotalSpending*/
+select u.name, SUM(price) as totsum , RANK() over (order by sum(price) desc) as rank_,  DENSE_RANK() over (order by sum(price) desc)as dense_
+FROM users u
+INNER JOIN orders o ON u.userid = o.userid
+INNER JOIN books b ON o.product_id = b.product_id
+group by u.userid,u.name
