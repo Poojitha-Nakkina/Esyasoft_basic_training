@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import EventComponent from './components/eventComponent';
 import LoginComp from './components/loginComp';
+import Component1 from './components/component1';
+import UseEffectcomp from './components/useEffectcomp';
 
 
 function App() {
@@ -21,7 +23,10 @@ function App() {
       <button onClick={decrementHandler}>decrement</button>
     */}
     {/* <EventComponent /> */}
-    <LoginComp />
+    {/* <LoginComp /> */}
+    {/* <Component1 /> */}
+    <UseEffectcomp />
+    
 
     </div>
   );
