@@ -12,12 +12,12 @@ const NumberListAnalyzer = () => {
     }
   };
 
-  // Memoized remove handler using useCallback
+
   const handleRemove = useCallback((indexToRemove) => {
     setNumberList(prev => prev.filter((_, idx) => idx !== indexToRemove));
   }, []);
 
-  // Memoized sum and max calculations using useMemo
+
   const sum = useMemo(() => {
     return numberList.reduce((acc, num) => acc + num, 0);
   }, [numberList]);
