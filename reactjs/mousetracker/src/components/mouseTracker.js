@@ -23,9 +23,9 @@ const MouseTracker = () => {
   return (
     <div>
       <h2>Mouse Tracker</h2>
-      <p>Move your mouse around!</p>
+     
       <p>
-        Current Mouse Position: X: {mousePosition.x}, Y: {mousePosition.y}
+        Mouse Position: X: {mousePosition.x}, Y: {mousePosition.y}
       </p>
     </div>
   );
