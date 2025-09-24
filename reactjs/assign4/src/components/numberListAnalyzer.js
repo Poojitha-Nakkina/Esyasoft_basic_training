@@ -27,7 +27,7 @@ const NumberListAnalyzer = () => {
   }, [numberList]);
 
   return (
-    <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto' }}>
+    <div >
       <h2>Number List Analyzer</h2>
 
       <input
